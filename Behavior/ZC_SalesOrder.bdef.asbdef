@@ -1,0 +1,17 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_SalesOrder alias SalesOrder
+{
+  use create;
+  use update;
+  use delete;
+  use action submit;
+  use association _Item { create; }
+}
+
+define behavior for ZC_SalesOrderItem alias SalesOrderItem
+{
+  use update;
+  use delete;
+}
